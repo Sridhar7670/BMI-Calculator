@@ -1,0 +1,65 @@
+#main{
+    display:block;
+}
+img{
+    display: inline;
+    margin-bottom: 0.5%;
+}
+#US-Units,#metric-units{
+    width: 25%;
+    background-color: rgb(216, 232, 245);
+}
+#metric-units{
+    background-color:rgb(189, 210, 229);
+}
+#usUnits,#MetricUnits{
+    border: 1px solid rgb(53, 47, 47);
+    margin: 1em 0;
+    padding: 1%;
+    width:50%;
+    height:auto;
+    background-color: rgb(216, 232, 245);
+}
+#MetricUnits{
+    background-color: rgb(189, 210, 229);
+}
+#MetricUnits{
+    display: none;
+}
+#submit1,#submit{
+    background-color: greenyellow;
+    border-radius: 5%;
+}
+#reset,#reset1{
+    background-color: rgb(225, 235, 235);
+}
+#date-time{
+    display: flex;
+    justify-content: space-between;
+    width:50vw;
+}
+#timer{
+    display: block;
+}
+#result{
+    margin-top: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    #usUnits, #MetricUnits {
+        width: 100%;
+    }
+    #date-time {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    #timer, #date {
+        margin-top: 10px;
+    }
+    #US-Units, #metric-units {
+        width: 45%;
+        margin: 5px;
+    }
+}
