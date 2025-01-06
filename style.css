@@ -11,7 +11,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background-color: #f0f0f0;
-    background-image: url(bmi.jpg);
+    background-image: url('./bmi.jpg');
     background-size: cover;
     height: 100vh;
     width: 100vw;
