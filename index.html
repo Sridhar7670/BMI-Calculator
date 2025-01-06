@@ -3,47 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
     <title>BMI Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <form>
-    <div id="main">
-        <h1 id="heading">BMI Calculator</h1>
-        <div id="image">
-            <img src="image.jpeg" height="29" alt="Modify values and click calculate to use">
-        </div>
+<body >
+<div class="container">
+    <h1>BMI Calculator</h1>
+    <div class="button-container">
+        <button id="us-units-btn" type="button" onclick="displayUS()">US Units</button>
+        <button id="metric-units-btn" type="button" onclick="displayMetric()">Metric Units</button>
     </div>
+    
+    <div class="form-container">
+        <form id="us-units-form" class="units-form">
+            <div>
+                <label for="ageUS">Age:</label>
+                <input type="number" id="ageUS" placeholder="Enter Age">
+            </div>
+            <div style="display: flex; justify-content: center; gap:0.5rem">
+                <label>Gender:</label>
+                <input type="radio" name="genderUS" value="male"><label>Male</label>
+                <input type="radio" name="genderUS" value="female"><label>Female</label>
+            </div>
+            <div>
+                <label for="Feet">Height:</label>
+                <input type="number" id="Feet" placeholder="Feet">
+                <input type="number" id="Inch" placeholder="Inches">
+            </div>
+            <div>
+                <label for="Pound">Weight:</label>
+                <input type="number" id="Pound" placeholder="Pounds">
+            </div>
+            <div class="button-container">
+                <button type="button" onclick="BMIUS()">Calculate</button>
+                <input type="reset">
+            </div>
+        </form>
 
-    <button id="US-Units" type="button" onclick="displayUS()">US Units</button>
-    <button id="metric-units" type="button" onclick="displayMu()">Metric Units</button>
-
-    <table id="usUnits" cellpadding="1" cellspacing="5">
-        <tr><td>Age:</td><td><input type="number" placeholder="Enter Age" id="ageUS"> &nbsp; Ages: 2-100</td></tr>
-        <tr><td>Gender:</td><td><input type="radio" name="genderUS" value="male"><label>Male</label><input type="radio" name="genderUS" value="female"><label>Female</label></td></tr>
-        <tr><td>Height:</td><td><input type="number" placeholder="Feet" id="Feet">&nbsp<input type="number" id="Inch" placeholder="Inches"></td></tr>
-        <tr><td>Weight:</td><td><input type="number" placeholder="Pounds" id="pound"></td></tr>
-        <tr><td></td><td><button type="button" id="submit" onclick="BMIUS()">Calculate</button>&nbsp;&nbsp;<input type="reset" id="reset"></td></tr>
-    </table>
-
-    <table id="MetricUnits" cellpadding="1" cellspacing="5">
-        <tr><td>Age:</td><td><input type="number" placeholder="Enter Age" id="ageMU"></td></tr>
-        <tr><td>Gender:</td><td><input type="radio" name="genderMU" value="male"><label>Male</label><input type="radio" name="genderMU" value="female"><label>Female</label></td></tr>
-        <tr><td>Height:</td><td><input type="number" placeholder="CM's" id="Centimeters"></td></tr>
-        <tr><td>Weight:</td><td><input type="number" placeholder="KG's" id="Kilos"></td></tr>
-        <tr><td></td><td><button type="button" id="submit1" onclick="BMIMU()">Calculate</button>&nbsp;&nbsp;<input type="reset" id="reset1"></td></tr>
-    </table>
-    </form>
-
-    <div id="result" style="margin: 1rem;"></div>
-
+        <form id="metric-units-form" class="units-form hidden">
+            <div>
+                <label for="ageMU">Age:</label>
+                <input type="number" id="ageMU" placeholder="Enter Age">
+            </div>
+            <div style="display: flex; justify-content: center; gap:0.5rem">
+                <label>Gender:</label>
+                <input type="radio" name="genderMU" value="male"><label>Male</label>
+                <input type="radio" name="genderMU" value="female"><label>Female</label>
+            </div>
+            <div>
+                <label for="Centimeters">Height:</label>
+                <input type="number" id="Centimeters" placeholder="CM's">
+            </div>
+            <div>
+                <label for="Kilos">Weight:</label>
+                <input type="number" id="Kilos" placeholder="KG's">
+            </div>
+            <div class="button-container">
+                <button type="button" onclick="BMIMetric()">Calculate</button>
+                <input type="reset">
+            </div>
+        </form>
+    </div>
+    
+    <div id="result"></div>
+    
     <footer>
+        <p>Made by Sridhar Reddy &#10084;</p>
         <div id="date-time">
             <div id="date"></div>
-            <p id="author">Made by Sridhar Reddy &#10084;</p>
             <div id="timer"></div>
         </div>
     </footer>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
