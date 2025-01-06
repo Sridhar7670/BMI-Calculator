@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const formContainer = document.querySelector('.form-container');
     const usForm = document.getElementById('us-units-form');
     const metricForm = document.getElementById('metric-units-form');
-
+    
     function displayUS() {
         usForm.classList.add('active');
         metricForm.classList.remove('active');
